@@ -413,7 +413,12 @@ img{
   width: 75%;
 }
 
+
 /*=============== works ===============*/
+
+.workstage{
+  margin-top: -100px;
+}
 
 .works__title{
   text-align: center;
@@ -421,7 +426,6 @@ img{
   font-weight: var(--font-bold);
   margin-bottom: var(--mb-2);
 }
-
 
 .works__data {
   text-align: center;
@@ -473,7 +477,7 @@ img{
 }
   
 .divisor{
-  padding-top: 30rem;
+  padding-top: 27rem;
 }
 .work , svg {
   position: absolute;
@@ -652,6 +656,14 @@ s
     width: 100%;
   }
 }
+
+.habilidades__title{
+  text-align: center;
+  font-size: var(--medium-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-2);
+}
+
 
 .habilidades__container{
   margin-left: auto;
