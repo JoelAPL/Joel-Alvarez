@@ -1,5 +1,6 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
   
 /*===== VARIABLES CSS =====*/
 :root {
@@ -282,7 +283,7 @@ img{
 /* BUTTONS */
 .button{
   display: inline-block;
-  background-color: var(--first-color-alt);
+  background-color: var(--first-color-send);
   color: #fff;
   padding: 1rem 1.5rem;
   border-radius: .5rem;
@@ -838,5 +839,74 @@ s
         font-weight: bold;
         color: #fff;
       }
+      .swiper-container {
+        width: 43%;
+        height: 70vh;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        margin-top: 135px;
+    }
 
- 
+    .swiper-slide {
+        background-size: cover;
+
+        border-radius: 10px;
+    }
+
+    .swiper-slide__text {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: #fff;
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .swiper-pagination {
+        bottom: 10px;
+    }
+
+    /* Estilos para las tarjetas de repositorios */
+.github-repos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.repos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.repo-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+}
+
+.repo-card img {
+    width: 100%;
+    height: auto;
+}
+
+.repo-card .repo-info {
+    padding: 20px;
+}
+
+.repo-card h3 {
+    margin-top: 0;
+}
+
+.repo-card p {
+    margin-bottom: 0;
+}

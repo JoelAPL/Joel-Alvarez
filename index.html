@@ -7,8 +7,8 @@
         <!-- BOX ICONS -->
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
         <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css">
         <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="shortcut icon" type="image/png" href="assets/img/favicor.png">
         <title>Joel | Diseñador web </title>
@@ -75,7 +75,6 @@
 
                 <div class="acerca__img">
                     <img src="assets/img/acerca.JPG"  class="acerca__img__edit"alt=""> 
-                    <h5>Foto de Joel Alvarez </h5>
                 </div>
                 
             </div>
@@ -89,20 +88,45 @@
                     
                     <div class="work workstage">
 
-                        <div class="work works__image">
-                            <div class="work workring">
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
+    
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- Imágenes del 0 al 9 -->
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/0.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/1.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/2.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/3.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/4.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/5.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/6.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/7.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/8.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
+                                <div class="swiper-slide" style="background-image:url('assets/img/carrusel/9.png')">
+                                    <div class="swiper-slide__text">Ornament Vase - Modern</div>
+                                </div>
                             </div>
+                            <!-- Agrega paginación -->
+                            <div class="swiper-pagination"></div>
                         </div>
+                        
                         
                     </div>
 
@@ -204,27 +228,13 @@
                 </div>
             </div>
         </section> 
-    
-            <!-- SEND GIFT 
-                <section class="send section">
-                    <div class="send__container bd-container bd-grid">
-                        <div class="send__content">
-                            <h2 class="section-title-center send__title"></h2>
-                            <p class="send__description"></p>
-                            <form action="">
-                                <div class="send__direction">
-                                    <input type="text" placeholder="" class="send__input">
-                                    <a href="#" class="button">Send</a>
-                                </div>
-                            </form>
-                        </div>
 
-                        <div class="send__img">
-                            <img src="assets/img/send.png" alt="">
-                        </div>
-                    </div>
-                </section>
-            -->
+        <section class="github-repos">
+            <h2>Mis Proyectos en GitHub</h2>
+            <div class="repos-container">
+                <!-- Aquí se generarán las tarjetas de repositorios -->
+            </div>
+        </section>
 
         </main>
 
@@ -277,8 +287,9 @@
             <p class="footer__copy">Joel Alvarez</p>
 
         </footer>
-    </section>
-    
+</section>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
     <script src="https://unpkg.com/scrollreveal"></script> <!-- SCROLL REVEAL -->

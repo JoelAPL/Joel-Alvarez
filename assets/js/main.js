@@ -188,3 +188,68 @@ function dragEnd(e){
 function getBgPos(i){ //returns the background-position string to create parallax movement in each image
   return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.working', 'rotationY')-180-i*36)/360*500 )+'px 0px';
 }
+
+var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+  },
+  pagination: {
+      el: '.swiper-pagination',
+  },
+});
+
+$(document).ready(function() {
+  // URL de la API de GitHub para obtener los repositorios de un usuario
+  var githubApiUrl = 'https://api.github.com/users/JoelAPL/repos';
+
+  // Obtener datos de los repositorios desde la API de GitHub
+  $.getJSON(githubApiUrl, function(data) {
+      // Iterar sobre los repositorios y generar las tarjetas
+      $.each(data, function(index, repo) {
+          // URL del archivo README.md del repositorio actual
+          var readmeUrl = `https://raw.githubusercontent.com/JoelAPL/${repo.name}/main/README.md`;
+
+          // Obtener el contenido del archivo README.md
+          $.ajax({
+              url: readmeUrl,
+              success: function(readmeContent) {
+                  // Crear la tarjeta del repositorio con la descripción del README.md
+                  var repoCard = `
+                      <div class="repo-card">
+                          <img src="https://via.placeholder.com/250" alt="Repo Image">
+                          <div class="repo-info">
+                              <h3>${repo.name}</h3>
+                              <p>${readmeContent ? readmeContent : 'No README.md content available'}</p>
+                              <a href="${repo.html_url}" target="_blank" class="btn">Ver en GitHub</a>
+                          </div>
+                      </div>
+                  `;
+                  $('.repos-container').append(repoCard);
+              },
+              error: function() {
+                  // En caso de error al obtener el README.md, mostrar un mensaje de error
+                  var repoCard = `
+                      <div class="repo-card">
+                          <img src="https://via.placeholder.com/250" alt="Repo Image">
+                          <div class="repo-info">
+                              <h3>${repo.name}</h3>
+                              <p>No README.md found</p>
+                              <a href="${repo.html_url}" target="_blank" class="btn">Ver en GitHub</a>
+                          </div>
+                      </div>
+                  `;
+                  $('.repos-container').append(repoCard);
+              }
+          });
+      });
+  });
+});
+
