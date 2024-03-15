@@ -205,51 +205,115 @@ var swiper = new Swiper('.swiper-container', {
       el: '.swiper-pagination',
   },
 });
-
 $(document).ready(function() {
-  // URL de la API de GitHub para obtener los repositorios de un usuario
-  var githubApiUrl = 'https://api.github.com/users/JoelAPL/repos';
+    // URL de la API de GitHub para obtener los repositorios de un usuario
+    var githubApiUrl = 'https://api.github.com/users/JoelAPL/repos';
 
-  // Obtener datos de los repositorios desde la API de GitHub
-  $.getJSON(githubApiUrl, function(data) {
-      // Iterar sobre los repositorios y generar las tarjetas
-      $.each(data, function(index, repo) {
-          // URL del archivo README.md del repositorio actual
-          var readmeUrl = `https://raw.githubusercontent.com/JoelAPL/${repo.name}/main/README.md`;
+    // Array para almacenar las tarjetas de repositorio
+    var repoCards = [];
 
-          // Obtener el contenido del archivo README.md
-          $.ajax({
-              url: readmeUrl,
-              success: function(readmeContent) {
-                  // Crear la tarjeta del repositorio con la descripción del README.md
-                  var repoCard = `
-                      <div class="repo-card">
-                          <img src="https://via.placeholder.com/250" alt="Repo Image">
-                          <div class="repo-info">
-                              <h3>${repo.name}</h3>
-                              <p>${readmeContent ? readmeContent : 'No README.md content available'}</p>
-                              <a href="${repo.html_url}" target="_blank" class="btn">Ver en GitHub</a>
-                          </div>
-                      </div>
-                  `;
-                  $('.repos-container').append(repoCard);
-              },
-              error: function() {
-                  // En caso de error al obtener el README.md, mostrar un mensaje de error
-                  var repoCard = `
-                      <div class="repo-card">
-                          <img src="https://via.placeholder.com/250" alt="Repo Image">
-                          <div class="repo-info">
-                              <h3>${repo.name}</h3>
-                              <p>No README.md found</p>
-                              <a href="${repo.html_url}" target="_blank" class="btn">Ver en GitHub</a>
-                          </div>
-                      </div>
-                  `;
-                  $('.repos-container').append(repoCard);
-              }
-          });
-      });
-  });
+    // Obtener datos de los repositorios desde la API de GitHub
+    $.getJSON(githubApiUrl, function(data) {
+        // Iterar sobre los repositorios y generar las tarjetas
+        $.each(data, function(index, repo) {
+            // URL del archivo README.md del repositorio actual
+            var readmeUrl = `https://raw.githubusercontent.com/JoelAPL/${repo.name}/main/README.md`;
+
+            // Obtener el contenido del archivo README.md
+            $.ajax({
+                url: readmeUrl,
+                success: function(readmeContent) {
+                    // Limitar el contenido del README.md a 100 caracteres
+                    var limitedContent = readmeContent ? readmeContent.substring(0, 100) : 'No README.md content available';
+
+                    // Crear la tarjeta del repositorio con la descripción del README.md limitada
+                    var repoCard = `
+                        <div class="repo-card">
+                            <div class="repo-info">
+                                <h3>${repo.name}</h3>
+                                <p>${limitedContent}</p>
+                                <a href="${repo.html_url}" target="_blank" class="button">Ver en GitHub</a>
+                            </div>
+                        </div>
+                    `;
+                    // Agregar la tarjeta al array
+                    repoCards.push(repoCard);
+
+                    // Verificar si hemos alcanzado el final de la lista de repositorios
+                    if (index === data.length - 1) {
+                        // Si es así, agregar todas las tarjetas al contenedor
+                        $('.repos-container').append(repoCards.join(''));
+
+                        // Inicializar el carrusel después de agregar todas las tarjetas
+                        $('.repos-container').slick({
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                            arrows: true,
+                            dots: true,
+                            responsive: [
+                                {
+                                    breakpoint: 768,
+                                    settings: {
+                                        slidesToShow: 2
+                                    }
+                                },
+                                {
+                                    breakpoint: 480,
+                                    settings: {
+                                        slidesToShow: 1
+                                    }
+                                }
+                            ]
+                        });
+                    }
+                },
+                error: function() {
+                    // En caso de error al obtener el README.md, mostrar un mensaje de error
+                    var repoCard = `
+                        <div class="repo-card">
+                            <div class="repo-info">
+                                <h3>${repo.name}</h3>
+                                <p>No README.md found</p>
+                                <a href="${repo.html_url}" target="_blank" class="button">Ver en GitHub</a>
+                            </div>
+                        </div>
+                    `;
+                    // Agregar la tarjeta al array
+                    repoCards.push(repoCard);
+
+                    // Verificar si hemos alcanzado el final de la lista de repositorios
+                    if (index === data.length - 1) {
+                        // Si es así, agregar todas las tarjetas al contenedor
+                        $('.repos-container').append(repoCards.join(''));
+
+                        // Inicializar el carrusel después de agregar todas las tarjetas
+                        $('.repos-container').slick({
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                            arrows: true,
+                            dots: true,
+                            responsive: [
+                                {
+                                    breakpoint: 768,
+                                    settings: {
+                                        slidesToShow: 2
+                                    }
+                                },
+                                {
+                                    breakpoint: 480,
+                                    settings: {
+                                        slidesToShow: 1
+                                    }
+                                }
+                            ]
+                        });
+                    }
+                }
+            });
+        });
+    });
 });
-
