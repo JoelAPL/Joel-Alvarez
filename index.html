@@ -7,8 +7,10 @@
         <!-- BOX ICONS -->
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
         <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
         <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="shortcut icon" type="image/png" href="assets/img/favicor.png">
         <title>Joel | Diseñador web </title>
@@ -33,7 +35,7 @@
                         <li class="nav__item"><a href="#works" class="nav__link">Trabajos</a></li>
                         <li class="nav__item"><a href="#acerca" class="nav__link">Acerca</a></li> 
                         <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
-                        <li class="nav__item"><a href="#footer" class="nav__link">Información</a></li>
+                        <li class="nav__item"><a href="#repo" class="nav__link">Repositorio</a></li>
                      
                         <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
                     </ul>
@@ -75,45 +77,64 @@
 
                 <div class="acerca__img">
                     <img src="assets/img/acerca.JPG"  class="acerca__img__edit"alt=""> 
-                    <h5>Foto de Joel Alvarez </h5>
                 </div>
                 
             </div>
         </section>
-
-        <!--works -->
-        <div class="works__content">
-            <section class="works section" id="works">
-
-                    <h1 class="works__title">Proyectos Realizados</h1>
-                    
-                    <div class="work workstage">
-
-                        <div class="work works__image">
-                            <div class="work workring">
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                                <div class="work workimg"></div>
-                            </div>
-                        </div>
-                        
+<!-- Trabajo -->
+<div class="works__content">
+    <section class="works section" id="works">
+        <h1 class="works__title">Proyectos Realizados</h1>
+        
+        <div class="work workstage">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Imágenes del 0 al 10 -->
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/0.png')">
+                        <div class="swiper-slide__text">JalproOne - Login</div>
                     </div>
-
-                        <p class="work__text works__data">Realización y colabroación en el diseño y desarrollo de una Aplicación web de Matriz de riesgo: <a class="nav__link" href="#">riskmanager.com</a></p>
-
-                        <p class="work__text works__data"> Mejora tecnica y visual de Sofware de facturacíon: <a class="nav__link" href="#">jalproone2.com</a></p>
-                        
-                        <p class="work__text works__data">Soporte y mantenimiento de aplicación web: <a class="nav__link" href="https://one.jalpro.com/">jalproone.com </a></p>
-                        
-            </section>        
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/1.png')">
+                        <div class="swiper-slide__text">JalproOnevs1 - Productos</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/2.png')">
+                        <div class="swiper-slide__text">Matriz-de-riesgo - Login</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/3.png')">
+                        <div class="swiper-slide__text">Matriz-de-riesgo - Solicitud</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/4.png')">
+                        <div class="swiper-slide__text">Matriz-de-riesgo - Main</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/5.png')">
+                        <div class="swiper-slide__text">Matriz-de-riesgo - Estadísticas</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/6.png')">
+                        <div class="swiper-slide__text">JalproOne - Nueva versión</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/8.png')">
+                        <div class="swiper-slide__text">Cotizador - Login</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/9.png')">
+                        <div class="swiper-slide__text">Cotizador - Main</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/10.png')">
+                        <div class="swiper-slide__text">Cotizador - Modal</div>
+                    </div>
+                </div>
+                <!-- Agrega paginación -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
+
+        <div class="work__description bd-container">
+            <p class="work__text works__data">A continuación, encontrarás una selección de proyectos en los que he colaborado y realizado:</p>
+            <p class="work__text works__data">Diseño y desarrollo de una aplicación web de Matriz de Riesgo: <a class="nav__link" href="#">riskmanager.com</a></p>
+            <p class="work__text works__data">Mejora técnica y visual de un software de facturación: <a class="nav__link" href="#">jalproone2.com</a></p>
+            <p class="work__text works__data">Soporte y mantenimiento de una aplicación web con facturación electrónica: <a class="nav__link" href="#">jalproone.com</a></p>
+            <p class="work__text works__data">Desarrollo de una aplicación de cotizaciones para agencia de viajes: <a class="nav__link" href="#">cotizador.panamatucantravel.com</a></p>
+        </div>
+    </section>
+</div>
 
         <!--necesario para dividir el carrusel con las habilidades--> 
         <div class="divisor"> 
@@ -204,27 +225,14 @@
                 </div>
             </div>
         </section> 
-    
-            <!-- SEND GIFT 
-                <section class="send section">
-                    <div class="send__container bd-container bd-grid">
-                        <div class="send__content">
-                            <h2 class="section-title-center send__title"></h2>
-                            <p class="send__description"></p>
-                            <form action="">
-                                <div class="send__direction">
-                                    <input type="text" placeholder="" class="send__input">
-                                    <a href="#" class="button">Send</a>
-                                </div>
-                            </form>
-                        </div>
 
-                        <div class="send__img">
-                            <img src="assets/img/send.png" alt="">
-                        </div>
-                    </div>
-                </section>
-            -->
+
+        <section class="github-repos" id="repo">
+            <h1 class="repo__title">Mis Proyectos en GitHub</h1>
+            <div class="repos-container">
+                <!-- Aquí se generarán las tarjetas de repositorios -->
+            </div>
+        </section>
 
         </main>
 
@@ -277,12 +285,16 @@
             <p class="footer__copy">Joel Alvarez</p>
 
         </footer>
-    </section>
-    
+</section>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
     <script src="https://unpkg.com/scrollreveal"></script> <!-- SCROLL REVEAL -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Swiper JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> 
     <script src="assets/js/main.js"></script>  <!-- MAIN JS -->
 
 </body>
@@ -290,5 +302,3 @@
 </html>
 
 
-
-<!-- Borrar los swipers -->
