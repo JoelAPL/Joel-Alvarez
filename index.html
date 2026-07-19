@@ -1,304 +1,457 @@
 <!DOCTYPE html>
-    <html lang="esp">
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <!-- BOX ICONS -->
-        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-        <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
-        <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="shortcut icon" type="image/png" href="assets/img/favicor.png">
-        <title>Joel | Diseñador web </title>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Joel Álvarez — Programador y desarrollador web full-stack de Panamá. Creador de apps como Conecta y Rig. PHP, JavaScript, SQL, React, Java y Python. Estudiante de Desarrollo de Software en la UTP.">
+    <meta name="keywords" content="Joel Álvarez, Joel Alvarez programador, desarrollador web Panamá, programador Panamá, full-stack, PHP, JavaScript, SQL, React, portfolio, JoelAPL">
+    <meta name="author" content="Joel Álvarez">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://joelapl.github.io/Joel-Alvarez/">
+
+    <!-- Open Graph / Redes sociales -->
+    <meta property="og:title" content="Joel Álvarez | Programador y Desarrollador Web Full-Stack">
+    <meta property="og:description" content="Portfolio de Joel Álvarez — desarrollador web panameño. Apps, proyectos y habilidades.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joelapl.github.io/Joel-Alvarez/">
+    <meta property="og:image" content="https://joelapl.github.io/Joel-Alvarez/assets/img/joel-retrato.jpg">
+    <meta property="og:locale" content="es_PA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joel Álvarez | Programador y Desarrollador Web Full-Stack">
+    <meta name="twitter:description" content="Portfolio de Joel Álvarez — desarrollador web panameño. Apps, proyectos y habilidades.">
+    <meta name="twitter:image" content="https://joelapl.github.io/Joel-Alvarez/assets/img/joel-retrato.jpg">
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Joel Álvarez",
+      "alternateName": "JoelAPL",
+      "url": "https://joelapl.github.io/Joel-Alvarez/",
+      "image": "https://joelapl.github.io/Joel-Alvarez/assets/img/joel-retrato.jpg",
+      "jobTitle": "Desarrollador Web Full-Stack",
+      "description": "Programador y desarrollador web full-stack de Panamá. Creador de aplicaciones web como Conecta y Rig.",
+      "nationality": "Panamá",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad Tecnológica de Panamá"
+      },
+      "knowsAbout": ["PHP", "JavaScript", "SQL", "React", "Java", "Python", "HTML", "CSS", "Symfony", "Drupal", "WordPress", "Mixpanel", "Flutter", "Oracle APEX"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Sofistic Cybersecurity"
+      },
+      "email": "mailto:joel.ale.programmer@gmail.com",
+      "sameAs": [
+        "https://github.com/JoelAPL",
+        "https://www.linkedin.com/in/joel-alvarez-72a047235/"
+      ]
+    }
+    </script>
+
+    <title>Joel Álvarez | Programador y Desarrollador Web Full-Stack en Panamá</title>
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicor.png">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 
 <body>
 
-    </head>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#inicio" class="nav__logo">Joel<span>APL</span></a>
 
-        <!-- SCROLL TOP -->
-        <a href="#" class="scrolltop" id="scroll-top">
-            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
-        </a>
-        
-        <!-- HEADER -->
-        <header class="l-header" id="header">
-            <nav class="nav bd-container">
-                <a href="#acerca" class="nav__logo">Joel Alvarez</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#inicio" class="nav__link active-link">Inicio</a></li>
+                    <li><a href="#acerca" class="nav__link">Acerca</a></li>
+                    <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+                    <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+                    <li><a href="#repositorios" class="nav__link">GitHub</a></li>
+                </ul>
+                <button class="nav__close" id="nav-close" aria-label="Cerrar menú">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#inicio" class="nav__link active-link">Inicio</a></li>  
-                        <li class="nav__item"><a href="#works" class="nav__link">Trabajos</a></li>
-                        <li class="nav__item"><a href="#acerca" class="nav__link">Acerca</a></li> 
-                        <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
-                        <li class="nav__item"><a href="#repo" class="nav__link">Repositorio</a></li>
-                     
-                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
-                    </ul>
-                </div>
+            <div class="nav__actions">
+                <button class="change-theme" id="theme-button" aria-label="Cambiar tema">
+                    <i class='bx bx-sun'></i>
+                </button>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-grid-alt'></i>
-                </div>
+    <main class="main">
 
-            </nav>
-        </header>
-
-        <main class="l-main">
-
-            <!-- inicio -->
-            <section class="inicio" id="inicio">
-                <div class="inicio__container bd-container bd-grid">
-
-                    <div class="inicio__img">
-                        <img src="assets/img/inicio.svg" alt="">
+        <!-- INICIO -->
+        <section class="hero section" id="inicio">
+            <div class="hero__container container grid">
+                <div class="hero__data reveal">
+                    <span class="hero__greeting">👋 Hola, qué tal</span>
+                    <h1 class="hero__title">Soy <span class="accent">Joel Álvarez</span>,<br>desarrollador web</h1>
+                    <p class="hero__description">
+                        Desarrollador full-stack de Panamá 🇵🇦. Diseño y construyo aplicaciones web,
+                        del front-end al back-end. Esta es una muestra de mi trabajo y de los
+                        proyectos que he realizado.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="https://github.com/JoelAPL" target="_blank" rel="noopener" class="button">
+                            <i class='bx bxl-github'></i> Perfil GitHub
+                        </a>
+                        <a href="assets/Joel-Alvarez-CV.pdf" download="Joel-Alvarez-CV.pdf" class="button button--ghost">
+                            <i class='bx bx-download'></i> Descargar CV
+                        </a>
+                        <a href="#proyectos" class="button button--ghost">
+                            Ver proyectos <i class='bx bx-right-arrow-alt'></i>
+                        </a>
                     </div>
-
-                    <div class="inicio__data">
-                        <h1 class="inicio__title">Hola, Que tal <br> Soy Joel </h1>
-                        <p class="inicio__description">Y esto es una muestra de mi trabajo y proyectos que e realizado al tiempo que llevo como programador Junior  </p>
-                        <a href="https://github.com/JoelAPL" class="button"><i class='bx bxl-github'></i> Perfil GitHub</a>
-                    </div>   
-
-                </div>
-            </section>
-
-        <!-- acerca -->
-        <section class="acerca section bd-container" id="acerca">
-            <div class="acerca__container bd-container bd-grid">
-                <div class="acerca__data">
-                    <h2 class="section-title-center">¿Quien soy? <br></h2>
-                    <p class="acerca__description">Hola, soy Joel Alvarez y soy un Programador Junior, Panameño, estudiante en la UTP, carrera(Lic.Desarrollo de Software); actualmente especializandome en el Diseño(front-end) y desarrollo web(back-end), No me gusta definirme por el trabajo que he hecho. Me defino por el trabajo que quiero hacer.</p>
                 </div>
 
-                <div class="acerca__img">
-                    <img src="assets/img/acerca.JPG"  class="acerca__img__edit"alt=""> 
+                <div class="hero__widget reveal">
+                    <div class="widget">
+                        <div class="widget__bar">
+                            <div class="widget__dots"><span></span><span></span><span></span></div>
+                            <div class="widget__tabs" role="tablist" aria-label="Mini juegos">
+                                <button class="widget__tab active" data-panel="panel-term" role="tab" aria-selected="true">terminal</button>
+                                <button class="widget__tab" data-panel="panel-bugs" role="tab" aria-selected="false">caza-bugs.exe</button>
+                                <button class="widget__tab" data-panel="panel-type" role="tab" aria-selected="false">speed-code.js</button>
+                            </div>
+                        </div>
+
+                        <!-- Panel 1: Terminal -->
+                        <div class="widget__panel" id="panel-term" role="tabpanel">
+                            <div class="term__body" id="term-body">
+                                <div class="term__line out">Bienvenido a mi portfolio interactivo <span class="ok">v2.0</span></div>
+                                <div class="term__line out">Escribe <b>help</b> para ver los comandos disponibles.</div>
+                                <div class="term__line term__input-row"><span class="prompt">joelapl@portfolio:~$</span><input id="term-input" autocomplete="off" spellcheck="false" aria-label="Escribe un comando"></div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 2: Caza-bugs -->
+                        <div class="widget__panel" id="panel-bugs" role="tabpanel" hidden>
+                            <div class="bugs__hud">
+                                <span>⏱ <b id="bugs-time">30</b>s</span>
+                                <span>Puntos: <b id="bugs-score">0</b></span>
+                                <span>🏆 Récord: <b id="bugs-record">0</b></span>
+                            </div>
+                            <div class="bugs__area" id="bugs-area">
+                                <div class="bugs__overlay" id="bugs-overlay">
+                                    <h3>🐛 Caza-bugs</h3>
+                                    <p>Aplasta todos los bugs que puedas en 30 segundos. ¡Los dorados valen ×3 y la calavera resta!</p>
+                                    <button class="button" id="bugs-start">Iniciar debug</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 3: Speed code -->
+                        <div class="widget__panel" id="panel-type" role="tabpanel" hidden>
+                            <div class="type__body">
+                                <div class="type__stats">
+                                    <span>⚡ WPM: <b id="type-wpm">0</b></span>
+                                    <span>🎯 Precisión: <b id="type-acc">100%</b></span>
+                                    <span>⏱ <b id="type-time">0.0</b>s</span>
+                                </div>
+                                <div class="type__snippet" id="type-snippet"></div>
+                                <textarea class="type__input" id="type-input" placeholder="Teclea el código de arriba… el tiempo corre con la primera tecla." spellcheck="false"></textarea>
+                                <div class="type__done" id="type-done" hidden>
+                                    <b>✔ ¡Completado!</b>
+                                    <button class="button" id="type-next">Otro snippet</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
         </section>
-<!-- Trabajo -->
-<div class="works__content">
-    <section class="works section" id="works">
-        <h1 class="works__title">Proyectos Realizados</h1>
-        
-        <div class="work workstage">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Imágenes del 0 al 10 -->
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/0.png')">
-                        <div class="swiper-slide__text">JalproOne - Login</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/1.png')">
-                        <div class="swiper-slide__text">JalproOnevs1 - Productos</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/2.png')">
-                        <div class="swiper-slide__text">Matriz-de-riesgo - Login</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/3.png')">
-                        <div class="swiper-slide__text">Matriz-de-riesgo - Solicitud</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/4.png')">
-                        <div class="swiper-slide__text">Matriz-de-riesgo - Main</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/5.png')">
-                        <div class="swiper-slide__text">Matriz-de-riesgo - Estadísticas</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/6.png')">
-                        <div class="swiper-slide__text">JalproOne - Nueva versión</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/8.png')">
-                        <div class="swiper-slide__text">Cotizador - Login</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/9.png')">
-                        <div class="swiper-slide__text">Cotizador - Main</div>
-                    </div>
-                    <div class="swiper-slide" style="background-image:url('assets/img/carrusel/10.png')">
-                        <div class="swiper-slide__text">Cotizador - Modal</div>
+
+        <!-- ACERCA -->
+        <section class="acerca section" id="acerca">
+            <div class="acerca__container container grid">
+                <div class="acerca__img reveal">
+                    <img src="assets/img/joel-retrato.jpg" alt="Joel Álvarez, desarrollador web full-stack de Panamá">
+                </div>
+
+                <div class="acerca__data reveal">
+                    <h2 class="section__title">¿Quién soy?</h2>
+                    <p class="acerca__description">
+                        Soy <strong>Joel Álvarez</strong>, programador y desarrollador web full-stack panameño
+                        con <strong>5+ años de experiencia</strong>, estudiante de la Licenciatura en Desarrollo
+                        de Software en la <strong>UTP</strong>. Actualmente trabajo en ciberseguridad desarrollando
+                        y manteniendo sitios y aplicaciones para el sector bancario con <strong>Drupal</strong> y
+                        <strong>Symfony</strong>. También construyo mis propias apps, como <strong>Conecta</strong>,
+                        una plataforma de gestión de miembros y grupos, y <strong>Rig Program</strong>,
+                        un sistema de administración financiera para organizaciones.
+                    </p>
+                    <p class="acerca__quote">
+                        “No me defino por el trabajo que he hecho. Me defino por el trabajo que quiero hacer.”
+                    </p>
+                    <div class="acerca__stats">
+                        <div class="acerca__stat">
+                            <h3>5+</h3>
+                            <span>Años de<br>experiencia</span>
+                        </div>
+                        <div class="acerca__stat">
+                            <h3>15+</h3>
+                            <span>Lenguajes<br>y tecnologías</span>
+                        </div>
+                        <div class="acerca__stat">
+                            <h3>UTP</h3>
+                            <span>Desarrollo<br>de Software</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Agrega paginación -->
-                <div class="swiper-pagination"></div>
             </div>
-        </div>
+        </section>
 
-        <div class="work__description bd-container">
-            <p class="work__text works__data">A continuación, encontrarás una selección de proyectos en los que he colaborado y realizado:</p>
-            <p class="work__text works__data">Diseño y desarrollo de una aplicación web de Matriz de Riesgo: <a class="nav__link" href="#">riskmanager.com</a></p>
-            <p class="work__text works__data">Mejora técnica y visual de un software de facturación: <a class="nav__link" href="#">jalproone2.com</a></p>
-            <p class="work__text works__data">Soporte y mantenimiento de una aplicación web con facturación electrónica: <a class="nav__link" href="#">jalproone.com</a></p>
-            <p class="work__text works__data">Desarrollo de una aplicación de cotizaciones para agencia de viajes: <a class="nav__link" href="#">cotizador.panamatucantravel.com</a></p>
-        </div>
-    </section>
-</div>
+        <!-- PROYECTOS -->
+        <section class="proyectos section" id="proyectos">
+            <div class="container">
+                <h2 class="section__title reveal">Proyectos realizados</h2>
+                <p class="section__subtitle reveal">Una selección de aplicaciones en las que he trabajado</p>
 
-        <!--necesario para dividir el carrusel con las habilidades--> 
-        <div class="divisor"> 
-        </div> 
+                <div class="swiper proyectos__swiper reveal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/conecta-main.jpeg" alt="Conecta — Dashboard de gestión de grupos y miembros" loading="lazy">
+                            <span class="swiper-slide__text">Conecta — Dashboard</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/conecta-login.jpeg" alt="Conecta — Login" loading="lazy">
+                            <span class="swiper-slide__text">Conecta — Login</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/rig-main.jpeg" alt="Rig Program — Panel de gestión financiera" loading="lazy">
+                            <span class="swiper-slide__text">Rig Program — Panel financiero</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/rig-login.png" alt="Rig Program — Login" loading="lazy">
+                            <span class="swiper-slide__text">Rig Program — Login</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/0.png" alt="JalproOne — Login" loading="lazy">
+                            <span class="swiper-slide__text">JalproOne — Login</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/1.png" alt="JalproOne — Productos" loading="lazy">
+                            <span class="swiper-slide__text">JalproOne — Productos</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/2.png" alt="Matriz de Riesgo — Login" loading="lazy">
+                            <span class="swiper-slide__text">Matriz de Riesgo — Login</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/3.png" alt="Matriz de Riesgo — Solicitud" loading="lazy">
+                            <span class="swiper-slide__text">Matriz de Riesgo — Solicitud</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/4.png" alt="Matriz de Riesgo — Panel principal" loading="lazy">
+                            <span class="swiper-slide__text">Matriz de Riesgo — Main</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/5.png" alt="Matriz de Riesgo — Estadísticas" loading="lazy">
+                            <span class="swiper-slide__text">Matriz de Riesgo — Estadísticas</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/6.png" alt="JalproOne — Nueva versión" loading="lazy">
+                            <span class="swiper-slide__text">JalproOne — Nueva versión</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/8.png" alt="Cotizador — Login" loading="lazy">
+                            <span class="swiper-slide__text">Cotizador — Login</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/9.png" alt="Cotizador — Panel principal" loading="lazy">
+                            <span class="swiper-slide__text">Cotizador — Main</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/img/carrusel/10.png" alt="Cotizador — Modal de cotización" loading="lazy">
+                            <span class="swiper-slide__text">Cotizador — Modal</span>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
 
-        <!-- habilidades -->
+                <div class="proyectos__grid grid">
+                    <article class="proyecto__card reveal">
+                        <i class='bx bx-group proyecto__icon'></i>
+                        <h3>Conecta</h3>
+                        <p>Plataforma de gestión de miembros y grupos para organizaciones: seguimientos, agenda, cumpleaños y salud del acompañamiento en tiempo real.</p>
+                        <span class="proyecto__domain">App web</span>
+                    </article>
+                    <article class="proyecto__card reveal">
+                        <i class='bx bx-wallet proyecto__icon'></i>
+                        <h3>Rig Program</h3>
+                        <p>Sistema de administración financiera para organizaciones: ingresos, gastos, fondos activos y cierres mensuales con reportes claros para la toma de decisiones.</p>
+                        <span class="proyecto__domain">App web</span>
+                    </article>
+                    <article class="proyecto__card reveal">
+                        <i class='bx bx-shield-quarter proyecto__icon'></i>
+                        <h3>Matriz de Riesgo</h3>
+                        <p>Diseño y desarrollo de una aplicación web para gestión y análisis de matrices de riesgo, con estadísticas y flujos de solicitud.</p>
+                        <span class="proyecto__domain">riskmanager.com</span>
+                    </article>
+                    <article class="proyecto__card reveal">
+                        <i class='bx bx-receipt proyecto__icon'></i>
+                        <h3>JalproOne 2</h3>
+                        <p>Mejora técnica y visual de un software de facturación: nueva interfaz, optimización de módulos y experiencia de usuario.</p>
+                        <span class="proyecto__domain">jalproone2.com</span>
+                    </article>
+                    <article class="proyecto__card reveal">
+                        <i class='bx bx-support proyecto__icon'></i>
+                        <h3>JalproOne</h3>
+                        <p>Soporte y mantenimiento de una aplicación web con facturación electrónica en producción.</p>
+                        <span class="proyecto__domain">jalproone.com</span>
+                    </article>
+                    <article class="proyecto__card reveal">
+                        <i class='bx bx-paper-plane proyecto__icon'></i>
+                        <h3>Cotizador de viajes</h3>
+                        <p>Desarrollo de una aplicación de cotizaciones para una agencia de viajes, con generación de cotizaciones en línea.</p>
+                        <span class="proyecto__domain">cotizador.panamatucantravel.com</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
         <section class="habilidades section" id="habilidades">
-            <div class="habilidades__container bd-container bd-grid">          
-                <div class="">
-                    <h1 class="habilidades__title">Habilidades Técnicas</h1>
-                    <p class="habilidades__text">Estos son los conocimientos prácticos en los diferentes lenguajes que manejo hasta ahora, <br> ademas del manejo de frameworks como: <br>(Materialize,  Bootstrap, Bulma). <br>Liberias de Javascript: (DataTables y JQuery) </p>
+            <div class="container">
+                <h2 class="section__title reveal">Habilidades técnicas</h2>
+                <p class="section__subtitle reveal">Tecnologías y herramientas con las que trabajo</p>
 
-                    <div class="habilidades__data">
-
-                        <div class="habilidades__names">
-                            <i class='bx bxl-html5 habilidades__icon'></i>
-                            <span class="habilidades__name">HTML5</span>
-                        </div>
-                        <div class="habilidades__bar habilidades__html">
-
-                        </div>
-                        <div>
-                            <span>95%</span>
-                        </div>
+                <div class="habilidades__grid grid">
+                    <div class="habilidad__card reveal">
+                        <i class='bx bxl-html5' style="color:#e44d26"></i>
+                        <h3>HTML5</h3>
+                        <span>Maquetación semántica y accesible</span>
                     </div>
-
-                    <div class="habilidades__data">
-
-                        <div class="habilidades__names">
-                            <i class='bx bxl-css3 habilidades__icon'></i>
-                            <span class="habilidades__name">CSS3</span>
-                        </div>
-                        <div class="habilidades__bar habilidades__css">
-                            
-                        </div>
-                        <div>
-                            <span>85%</span>
-                        </div>
-
+                    <div class="habilidad__card reveal">
+                        <i class='bx bxl-css3' style="color:#2965f1"></i>
+                        <h3>CSS3</h3>
+                        <span>Diseño responsive, Flexbox y Grid</span>
                     </div>
-
-                    <div class="habilidades__data">
-
-                        <div class="habilidades__names">
-                            <i class='bx bxl-javascript habilidades__icon' ></i>
-                            <span class="habilidades__name">JAVASCRIPT</span>
-                        </div>
-                        <div class="habilidades__bar habilidades__js">
-                            
-                        </div>
-                        <div>
-                            <span>75%</span>
-                        </div>
-
+                    <div class="habilidad__card reveal">
+                        <i class='bx bxl-javascript' style="color:#f0db4f"></i>
+                        <h3>JavaScript</h3>
+                        <span>Interactividad, DOM y consumo de APIs</span>
                     </div>
-
-                    <div class="habilidades__data">
-
-                        <div class="habilidades__names">
-                            <i class='bx bxs-data habilidades__icon'></i>
-                            <span class="habilidades__name">SQL</span>
-                        </div>
-
-                        <div class="habilidades__bar habilidades__mysql">
-                            
-                        </div>
-                        <div>
-                            <span>80%</span>
-                        </div>
-
+                    <div class="habilidad__card reveal">
+                        <i class='bx bxl-php' style="color:#8892be"></i>
+                        <h3>PHP</h3>
+                        <span>Back-end y facturación electrónica</span>
                     </div>
-
-                    <div class="habilidades__data">
-
-                        <div class="habilidades__names">
-                            <i class='bx bxl-php habilidades__icon'></i>
-                            <span class="habilidades__name">PHP</span>
-                        </div>
-                        <div class="habilidades__bar habilidades__php">
-                            
-                        </div>
-                        <div>
-                            <span>75%</span>
-                        </div>
-
+                    <div class="habilidad__card reveal">
+                        <i class='bx bxs-data' style="color:#6C63FF"></i>
+                        <h3>SQL</h3>
+                        <span>Modelado y consultas de bases de datos</span>
                     </div>
-
+                    <div class="habilidad__card reveal">
+                        <i class='bx bxl-react' style="color:#61dafb"></i>
+                        <h3>React</h3>
+                        <span>Componentes e interfaces dinámicas</span>
+                    </div>
+                    <div class="habilidad__card reveal">
+                        <i class='bx bxl-java' style="color:#f89820"></i>
+                        <h3>Java</h3>
+                        <span>Programación orientada a objetos</span>
+                    </div>
+                    <div class="habilidad__card reveal">
+                        <i class='bx bxl-python' style="color:#3776ab"></i>
+                        <h3>Python</h3>
+                        <span>Scripts, automatización y utilidades</span>
+                    </div>
                 </div>
-            </div>
-        </section> 
 
-
-        <section class="github-repos" id="repo">
-            <h1 class="repo__title">Mis Proyectos en GitHub</h1>
-            <div class="repos-container">
-                <!-- Aquí se generarán las tarjetas de repositorios -->
+                <div class="habilidades__tags reveal">
+                    <span class="tag">Symfony</span>
+                    <span class="tag">Drupal CMS</span>
+                    <span class="tag">WordPress</span>
+                    <span class="tag">Mixpanel</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Twig</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Flutter / Dart</span>
+                    <span class="tag">Oracle APEX</span>
+                    <span class="tag">IA aplicada (Gemini)</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">Materialize</span>
+                    <span class="tag">jQuery</span>
+                    <span class="tag">DataTables</span>
+                    <span class="tag">Git · GitLab · Bitbucket</span>
+                </div>
             </div>
         </section>
 
-        </main>
+        <!-- REPOSITORIOS GITHUB -->
+        <section class="repos section" id="repositorios">
+            <div class="container">
+                <h2 class="section__title reveal">Mis proyectos en GitHub</h2>
+                <p class="section__subtitle reveal">Repositorios públicos, directo desde la API de GitHub</p>
+
+                <div class="repos__container grid" id="repos-container">
+                    <p class="repos__loading">Cargando repositorios…</p>
+                </div>
+
+                <div class="repos__more">
+                    <button class="button button--ghost" id="repos-toggle" hidden>
+                        Ver todos los repositorios <i class='bx bx-chevron-down'></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <section id="footer">
-        <footer class="footer section">
-            <div class="container">
-                <div class="footer__container bd-container bd-grid">
-                    <div class="footer__content">
-                        <h3 class="footer__title">
-                            <a href="#inicio" class="footer__logo">Web Design</a>
-                        </h3>
-                        <p class="footer__description"> Si se puede imaginar, se puede programar</p>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div>
+                    <a href="#inicio" class="nav__logo">Joel<span>APL</span></a>
+                    <p class="footer__tagline">Si se puede imaginar, se puede programar.</p>
+                </div>
+
+                <div class="footer__contact">
+                    <h3>Contacto</h3>
+                    <div class="footer__social">
+                        <a href="https://api.whatsapp.com/send?l=es&phone=50764365433" target="_blank" rel="noopener" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="mailto:joel.ale.programmer@gmail.com" aria-label="Correo"><i class='bx bx-envelope'></i></a>
+                        <a href="https://www.linkedin.com/in/joel-alvarez-72a047235/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/JoelAPL" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                        <a href="assets/Joel-Alvarez-CV.pdf" download="Joel-Alvarez-CV.pdf" aria-label="Descargar CV"><i class='bx bx-file'></i></a>
                     </div>
-
-                    <div class="footer__content">
-                        <h3 class="footer__title">Tipos de Paginas web</h3>
-                        <ul>
-                            <li><a href="#acerca" class="footer__link">fron-ted</a></li>
-                            <li><a href="#acerca" class="footer__link">back-end</a></li>
-                            <li><a href="#acerca" class="footer__link">Website Responsive</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__content">
-                        <h3 class="footer__title">Lenguajes de Programación</h3>
-                        <ul>
-                            <li><a href="#habilidades" class="footer__link">Javascript</a></li>
-                            <li><a href="#habilidades" class="footer__link">PHP</a></li>
-                            <li><a href="#habilidades" class="footer__link">HTML</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__content">
-                        <h3 class="footer__title">Contacto</h3>
-
-                        <a href="https://api.whatsapp.com/send?l=es&amp;phone=50764365433" class="footer__social"><i class='bx bxl-whatsapp'></i></a>
-
-                        <a href="mailto:joel.ale.programmer@gmail.com" class="footer__social"><i class='bx bx-mail-send' ></i></a>
-
-                        <a href="tel:50764365433" class="footer__social"><i class='bx bx-phone'></i></a><br>
-                        
-                        <a href="https://github.com/JoelAPL" class="footer__social"><i class='bx bxl-github'></i> Perfil GitHub</a>
-
-
-                    </div>
-                </div> 
+                </div>
             </div>
 
-            <p class="footer__copy">Joel Alvarez</p>
+            <p class="footer__copy">© <span id="year"></span> Joel Álvarez — Hecho con <i class='bx bx-heart'></i> en Panamá</p>
+        </div>
+    </footer>
 
-        </footer>
-</section>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
-    <script src="https://unpkg.com/scrollreveal"></script> <!-- SCROLL REVEAL -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Swiper JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- SCROLL TOP -->
+    <a href="#inicio" class="scrolltop" id="scroll-top" aria-label="Volver arriba">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> 
-    <script src="assets/js/main.js"></script>  <!-- MAIN JS -->
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>
-
-
